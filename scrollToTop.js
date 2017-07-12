@@ -1,4 +1,4 @@
-var scrollToTop = (function(){
+/*var scrollToTop = (function(){
 	var delta;
 	var time;
 	var speed;
@@ -26,3 +26,32 @@ var scrollToTop = (function(){
 	};
 	return initialize;
 }());
+
+*/
+
+$("document").ready(function(){
+    //var scrollBottom = $(window).scrollTop() + $(window).height() ;
+    //alert("Here");
+    $(window).scroll(function(){
+        if($(this).scrollTop()>300){
+            $(".scrollUp").fadeIn("fast");
+            $(".scrollDown").fadeOut("fast");
+        }
+        else{
+            $(".scrollDown").fadeIn("fast");
+            $(".scrollUp").fadeOut("fast");
+        }
+    });
+
+    $(".scrollDown").click(function(){
+        $("html,body").animate({
+            scrollTop:500
+        },800);
+    });
+
+    $(".scrollUp").click(function(){
+        $("html,body").animate({
+            scrollTop:0
+        },800);
+    });
+});

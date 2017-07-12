@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Scroll To Top</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .scrollDown{
+            border: none;
+            border-radius: 50%;
+            padding: 20px;
+            background-color: crimson;
+            color: ghostwhite;
+            position: absolute;
+            right: 3%;
+            top: 250px;
+            box-shadow: 0 0 7px #555;
+            text-align: center;
+        }
+
+        .scrollUp{
+            border: none;
+            display: none;
+            border-radius: 50%;
+            padding: 20px;
+            background-color: crimson;
+            color: ghostwhite;
+            position: fixed;
+            right: 3%;
+            bottom: 100px;
+            box-shadow: 0 0 7px #555;
+            text-align: center;
+        }
+
+        section:nth-child(1){
+            width: 100%;
+            background-color: lavender;
+            font-size: larger;
+            height: 280px;
+        }
+        section:nth-child(1) h1{
+            padding: 100px;
+        }
+        section:nth-child(2){
+            font-size: 36px;
+            height: 700px;
+        }
+
+        section:nth-child(2) p{
+            margin: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Top Section</h1>
+    </section>
+    <section class="scrollSection">
+        <p>The rest of the page</p>
+    </section>
+    <a href="#" class="scrollDown"><i class="material-icons">keyboard_arrow_down</i></a>
+    <a href="#" class="scrollUp"><i class="material-icons">keyboard_arrow_up</i></a>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="scrollToTop.js"></script>
+</body>
+</html>
